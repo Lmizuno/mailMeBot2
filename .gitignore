@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ignore all logs
+*.log
+
+# ignore my info
+userInfo.json

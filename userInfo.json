@@ -1,0 +1,11 @@
+{
+  "browser": {
+    "URL": "https://www.ontario.ca/page/2020-ontario-immigrant-nominee-program-updates",
+    "geckoPath": "C:\\\\Python\\\\OinpApp\\\\geckodriver.exe"
+  },
+  "email": {
+    "login": "pythonapplmd@gmail.com",
+    "password": "n>7`C45B_x{>(9K6",
+    "connectionServer": "smtp.gmail.com"
+  }
+}

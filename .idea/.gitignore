@@ -1,7 +1,7 @@
 # Default ignored files
 /workspace.xml
 
-../venv
-../src/database/database.db
-../user_info.txt
+venv/
+database.db
+user_info.txt
 

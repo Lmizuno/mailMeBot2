@@ -1,7 +1,9 @@
 # Default ignored files
 .idea/workspace.xml
-
+#virtual env dir
 venv/
+#database file
 database.db
+#user info
 user_info.txt
 

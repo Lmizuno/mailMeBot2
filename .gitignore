@@ -1,9 +1,0 @@
-# Default ignored files
-.idea/
-#virtual env dir
-venv/
-#database file
-src/datadase/oinpUpdatesDatabase.db
-#user info
-user_info.txt
-

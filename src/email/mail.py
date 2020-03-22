@@ -1,15 +1,29 @@
 from socket import gaierror
 import smtplib
+import json
+import os
+
+mailInfo = {}
+
+# path = os.path.join(os.getcwd(), '..', '..', 'user_info.json')
+# path = "C:\\Python\\mailmeBot\\user_info.json"
+
+# path = os.path.join('..', '..', 'user_info.json')
+path = os.path.abspath('user_info.json')
+with open(path) as f:
+    mailInfo = json.loads(f.read())
 
 
-sender = "Luis Mizuno <pythonapplmd@gmail.com>"
-receiver = "Luis Mizuno<pythonapplmd@gmail.com>"
-login = "pythonapplmd@gmail.com"
-password = """n>7`C45B_x{>(9K6"""
+sender = mailInfo['sender-name'] + ' <' + mailInfo['email-login'] + '>'
+receiver = mailInfo['receiver-email']
+login = mailInfo['email-login']
+password = mailInfo['email-password']
+smtp_server_address = mailInfo['smtp-server-address']
+smtp_TLS_port = mailInfo['smtp-tls-port']
 
 
 def mailError():
-    conn = smtplib.SMTP("smtp.gmail.com", 587)
+    conn = smtplib.SMTP(smtp_server_address, smtp_TLS_port)
     try:
         with conn as server:
             server.starttls()
@@ -28,7 +42,7 @@ def mailError():
 
 
 def emailUpdate(messages):
-    conn = smtplib.SMTP("smtp.gmail.com", 587)
+    conn = smtplib.SMTP(smtp_server_address, smtp_TLS_port)
     for m in messages:
         date = str(m['date'])
         text = str(m['data'])

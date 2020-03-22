@@ -1,9 +1,9 @@
 # Default ignored files
-.idea/workspace.xml
+.idea/
 #virtual env dir
 venv/
 #database file
-database.db
+src/datadase/oinpUpdatesDatabase.db
 #user info
-user_info.*
+user_info.txt
 

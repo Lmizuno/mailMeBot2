@@ -3,6 +3,8 @@
 #virtual env dir
 /venv/
 #database file
-/src/database/*.db
+*.db
 #user info
-user_info.txt
+user_info.json
+#logs
+*.log

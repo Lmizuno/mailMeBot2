@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a5f2314-8b27-42fc-8e32-ad5487d45107" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +164,7 @@
       <workItem from="1584807211314" duration="3693000" />
       <workItem from="1584815742263" duration="1871000" />
       <workItem from="1584822674701" duration="910000" />
-      <workItem from="1584830228692" duration="3678000" />
+      <workItem from="1584830228692" duration="3866000" />
     </task>
     <task id="LOCAL-00001" summary="Added folders and files to gitignore">
       <created>1584835489721</created>
@@ -200,7 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584836068333</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added folders and files to gitignore">
+      <created>1584836126394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584836126394</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added folders and files to gitignore">
+      <created>1584836160501</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584836160501</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,10 +234,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2472" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584645679648" />
-    <state x="2505" y="114" key="CommitChangelistDialog2" timestamp="1584836129591">
+    <state x="2505" y="114" key="CommitChangelistDialog2" timestamp="1584836295166">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2505" y="114" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584836129591" />
+    <state x="2505" y="114" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584836295166" />
     <state x="2660" y="279" key="FileChooserDialogImpl" timestamp="1584645650868">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -235,10 +250,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584836029510" />
-    <state x="2472" y="257" key="Vcs.Push.Dialog.v2" timestamp="1584836075550">
+    <state x="2472" y="257" key="Vcs.Push.Dialog.v2" timestamp="1584836168007">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2472" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584836075550" />
+    <state x="2472" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584836168007" />
     <state x="2576" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1584822680142">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>

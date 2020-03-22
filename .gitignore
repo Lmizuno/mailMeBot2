@@ -1,2 +1,8 @@
-
-
+# Default ignored files
+.idea/
+#virtual env dir
+/venv/
+#database file
+/src/database/*.db
+#user info
+user_info.txt

@@ -1,29 +1,38 @@
-from src.browser.browser import openBrowser
+from src.browser.browser import openBrowser, getRequest, parseJsonToString, getTextFromFindAll, fireIFTTT
 from src.checksum.checksum import checksumList, checksumString
 from src.database.databaseManipulation import getUpdatesFromDatabase, updateDatabase, findUpdate
 from src.email.mail import emailUpdate, mailError
 import time
-browserInstance = openBrowser()
+import json
 
-time.sleep(4)
-body = browserInstance.find_element_by_css_selector('#pagebody')
-infoDates = browserInstance.find_elements_by_css_selector('#pagebody > h3')
-infoMonths = browserInstance.find_elements_by_css_selector('#pagebody > h2')
+# browserInstance = openBrowser()
 
-bodyText = body.text
+# time.sleep(4)
+# body = browserInstance.find_element_by_css_selector('#pagebody')
+# infoDates = browserInstance.find_elements_by_css_selector('#pagebody > h3')
+# infoMonths = browserInstance.find_elements_by_css_selector('#pagebody > h2')
+
+# bodyText = body.text
+
+requestPage = getRequest()
+
+
+bodyText = parseJsonToString(requestPage.text)
+infoMonths = getTextFromFindAll(requestPage.text, 'h2')
+infoDates = getTextFromFindAll(requestPage.text, 'h3')
 
 dataList = bodyText.split('\n')
 
 # clears the dataList
 for i in range(0, len(dataList) - len(infoMonths)):
     for month in infoMonths:
-        if dataList[i] == month.text:
+        if dataList[i] == month:
             dataList.pop(i)
             break
 
 for i in range(0, len(dataList)):
     for dates in infoDates:
-        if dataList[i] == dates.text:
+        if dataList[i] == dates:
             dataList[i] = '\n'
             break
 
@@ -44,7 +53,7 @@ updates.reverse()
 updatesList = []
 
 for i in range(0, len(updates)):
-    data = dict(id=checksumString(updates[i]), date=infoDates[i].text, data=updates[i])
+    data = dict(id=checksumString(updates[i]), date=infoDates[i], data=updates[i])
     updatesList.append(data)
 
 fileDataList = {}
@@ -56,7 +65,7 @@ fileDataList = {}
 # updateDatabase(fileDataList)
 
 fileDataList = getUpdatesFromDatabase()
-#copy data
+# copy data
 # updatedList = fileDataList
 isUpToDate = False
 # get last update from both data sets and compare
@@ -69,9 +78,11 @@ if lastUpdates != lastDataInFile:
         print('Update Found updating database and sending email')
         updateDatabase(newUpdatesList)
         emailUpdate(newUpdatesList)
+        # IFTTT only the last one
+        fireIFTTT(newUpdatesList[0]['date'], newUpdatesList[0]['data'])
     else:
         print('No new Update found')
 else:
     print('same number of updates so far')
 
-browserInstance.close()
+# browserInstance.close()

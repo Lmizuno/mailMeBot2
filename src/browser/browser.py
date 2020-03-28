@@ -5,8 +5,15 @@ import bs4
 import json
 import os
 
-path = os.path.abspath('user_info.json')
-with open(path) as f:
+
+# path = os.path.abspath('user_info.json')
+# path = ('./../../user_info.json')
+rel_path = """./../../user_info.json"""
+script_path = os.path.abspath(__file__) # i.e. /path/to/dir/foobar.py
+script_dir = os.path.split(script_path)[0]
+# ^-- absolute dir the script is in
+abs_file_path = os.path.join(script_dir, rel_path)
+with open(abs_file_path) as f:
     browserInfo = json.loads(f.read())
 
 

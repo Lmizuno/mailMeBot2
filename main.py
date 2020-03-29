@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from src.browser.browser import openBrowser, getRequest, parseJsonToString, getTextFromFindAll, fireIFTTT
 from src.checksum.checksum import checksumList, checksumString
-from src.database.databaseManipulation import getUpdatesFromDatabase, updateDatabase, findUpdate, lastUpdatesMatch
+from src.database.databaseManipulation import getUpdatesFromDatabase, updateDatabase, findUpdate, lastUpdatesMatch, \
+    findUpdates
 from src.email.mail import emailUpdate, mailError
 import time
 import pprint
@@ -87,6 +88,7 @@ lastDataInFile = len(fileDataList)
 
 # check if the last update match, if don't, look for the last update that matches and append everything after it
 if not lastUpdatesMatch(updatesList, fileDataList):
+    print("Looking for updates")
     newUpdatesList = findUpdates(updatesList, fileDataList)
 
 exit()
